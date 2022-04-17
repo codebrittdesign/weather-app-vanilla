@@ -1,4 +1,99 @@
-h1 {
-    color: hotpink;
+body {
+    color: #000000;
+  }
+  #container {
+    border: 2px solid #ff6b95;
+    background: linear-gradient(-45deg, #ffc796 0%, #ff6b95 100%);
+    display: block;
+    margin: 5px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    padding: 15px;
+    box-shadow: 2px 2px 20px #c0c0c0;
+  }
+  
+  .tempdisplay,
+  .cityname {
+    font-size: 30px;
+    font-family: "Noto Serif", serif;
+    font-weight: bolder;
+  }
+  
+  h3 {
+    font-size: 12px;
+    font-family: "serif";
+    font-weight: bold;
+  }
+  
+  .forecast-day {
+    font-size: 18px;
+  }
+  
+  .unit {
     font-size: 20px;
-}
+  }
+  #search-field {
+    color: #000000;
+    margin-left: 175px;
+  }
+  
+  #submit-city {
+    background-color: #d44f75;
+    font-size: 14px;
+    border: 2px solid #d44f75;
+  }
+  
+  ::placeholder {
+    color: #000000;
+    font-size: 12px;
+  }
+  
+  .card,
+  .card-body {
+    font-size: 14px;
+  
+    background-color: transparent;
+    border: none;
+  }
+  
+  ul,
+  li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  span {
+    font-size: 50px;
+  }
+  
+  .cf {
+    font-size: 20px;
+  }
+  .dateandtime {
+    font-size: 14px;
+    font-family: "serif";
+    font-weight: bold;
+  }
+  
+  a,
+  a:hover {
+    text-decoration: none;
+    color: #000000;
+  }
+  .currentemoji {
+    margin: 20px;
+  }
+  
+  .label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  #humidity,
+  #wind,
+  #high,
+  #low {
+    font-size: 14px;
+  }
+  
