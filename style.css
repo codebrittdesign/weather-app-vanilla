@@ -2,14 +2,14 @@ body {
     color: #000000;
   }
   #container {
-    border: 2px solid #ff6b95;
-    background: linear-gradient(-45deg, #ffc796 0%, #ff6b95 100%);
+    border: 2px solid #c9baad;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
     display: block;
     margin: 5px auto;
     border-radius: 10px;
     max-width: 600px;
     padding: 15px;
-    box-shadow: 2px 2px 20px #c0c0c0;
+    box-shadow: 2px 2px 20px #bcaea2;
   }
   
   .tempdisplay,
@@ -33,18 +33,18 @@ body {
     font-size: 20px;
   }
   #search-field {
-    color: #000000;
+    color: #23201e;
     margin-left: 175px;
   }
   
   #submit-city {
-    background-color: #d44f75;
+    background-color: #7ebbb3;
     font-size: 14px;
-    border: 2px solid #d44f75;
+    border: 2px solid #7ebbb3;
   }
   
   ::placeholder {
-    color: #000000;
+    color: #23201e;
     font-size: 12px;
   }
   
@@ -79,7 +79,7 @@ body {
   a,
   a:hover {
     text-decoration: none;
-    color: #000000;
+    color: rgb(150, 90, 106);
   }
   .currentemoji {
     margin: 20px;
