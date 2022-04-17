@@ -1,8 +1,9 @@
 body {
-    color: #000000;
+    color: #292622;
+    background-color: #bdaea1;
   }
   #container {
-    border: 2px solid #c9baad;
+    border: 2px solid #d2c1b3;
     background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
     display: block;
     margin: 5px auto;
