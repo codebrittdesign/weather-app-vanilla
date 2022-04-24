@@ -1,25 +1,24 @@
 body {
     color: #292622;
-    background-color: #bdaea1;
+    background-color: #cbbaab;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
   #container {
-    border: 2px solid #d2c1b3;
     background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
     display: block;
     margin: 5px auto;
-    border-radius: 10px;
     max-width: 600px;
     padding: 15px;
     box-shadow: 2px 2px 20px #bcaea2;
   }
   
   .container-brdr {
-    border-left: 50px solid;
-    border-right: 50px solid;
+    border-left: 30px solid;
+    border-right: 30px solid;
     border-top: 2px solid #d2c1b3;
     border-bottom: 2px solid #d2c1b3;
     padding: 15px;
+    border-radius: 10px;
     border-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Houndstooth.jpg/195px-Houndstooth.jpg) 40 round;
   }
   
