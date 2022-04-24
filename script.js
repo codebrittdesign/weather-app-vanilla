@@ -11,11 +11,23 @@ function now(date) {
       "Friday",
       "Saturday"
     ];
+
     let day = days[dayList];
+    
+    if (hours > 12) {
+        hours = hours - 12;
+    }
+    if (hours < 10) {
+        hours = '0' + hours;
+    }
+    if (minutes < 10) {
+        minutes = '0' + minutes;
+    }
   
     return `${day}, ${hours}:${minutes}`;
   }
   
+
   function weatherDisplay(response) {
     document.querySelector("h1").innerHTML = response.data.name;
     document.querySelector("#current-temp").innerHTML = Math.round(

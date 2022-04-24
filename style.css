@@ -1,6 +1,7 @@
 body {
     color: #292622;
     background-color: #bdaea1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   #container {
     border: 2px solid #d2c1b3;
@@ -13,19 +14,32 @@ body {
     box-shadow: 2px 2px 20px #bcaea2;
   }
   
-  .tempdisplay,
+  .container-brdr {
+    border-left: 50px solid;
+    border-right: 50px solid;
+    border-top: 2px solid #d2c1b3;
+    border-bottom: 2px solid #d2c1b3;
+    padding: 15px;
+    border-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Houndstooth.jpg/195px-Houndstooth.jpg) 40 round;
+  }
+  
+  }
+  h1,
   .cityname {
-    font-size: 30px;
-    font-family: "Noto Serif", serif;
-    font-weight: bolder;
+    font-size: 24px;
+    font-weight: 100;
+    margin-top: 25px;
   }
   
   h3 {
     font-size: 12px;
-    font-family: "serif";
-    font-weight: bold;
+    font-weight: 200;
   }
   
+  #current-temp {
+      font-size: 56px; 
+   
+  }
   .forecast-day {
     font-size: 18px;
   }
@@ -39,9 +53,9 @@ body {
   }
   
   #submit-city {
-    background-color: #7ebbb3;
-    font-size: 14px;
-    border: 2px solid #7ebbb3;
+    background-color: #bcaea2;
+    font-size: 12px;
+    border: 2px solid #bcaea2;
   }
   
   ::placeholder {
@@ -72,8 +86,8 @@ body {
     font-size: 20px;
   }
   .dateandtime {
-    font-size: 14px;
-    font-family: "serif";
+    font-size: 16px;
+    font-family: serif;
     font-weight: bold;
   }
   
@@ -83,7 +97,9 @@ body {
     color: rgb(150, 90, 106);
   }
   .currentemoji {
-    margin: 20px;
+    margin-top: 35px;
+    margin-left: 20px;
+    font-size: 84px;
   }
   
   .label {
@@ -95,6 +111,6 @@ body {
   #wind,
   #high,
   #low {
-    font-size: 14px;
+    font-size: 16px;
   }
   
