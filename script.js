@@ -13,7 +13,7 @@ function now(date) {
     ];
 
     let day = days[dayList];
-    
+
     if (hours > 12) {
         hours = hours - 12;
     }
@@ -28,19 +28,24 @@ function now(date) {
   }
   
 
-  function weatherDisplay(response) {
-    document.querySelector("h1").innerHTML = response.data.name;
-    document.querySelector("#current-temp").innerHTML = Math.round(
-      response.data.main.temp
-    );
+  function displayWeather(response) {
+    let cityElement = document.querySelector("#city");
+    let tempElement = document.querySelector("#current-temp");
+    let dateElement = document.querySelector(".dateandtime"); 
+    let conditionsElement = document.querySelector("#conditions");
+    let humidityElement = document.querySelector("#humidity");
+    let windElement = document.querySelector("#wind");
+    
   
-    document.querySelector("#humidity").innerHTML = Math.round(
-      response.data.main.humidity
-    );
-    document.querySelector("#wind").innerHTML = Math.round(
-      response.data.wind.speed
-    );
-  }
+    cityElement.innerHTML = response.data.name;
+    tempElement.innerHTML = Math.round(response.data.main.temp);
+    dateElement.innerHTML = formatDate(response.data.dt * 1000);
+    conditionsElement.innerHTML = response.data.weather[0].description;
+    humidityElement.innerHTML = Math.round(
+      response.data.main.humidity);
+    windElement.innerHTML = Math.round(
+      response.data.main.wind);
+   }
   
   function searchCity(city) {
     let apiKey = "b7b9844b6ed8730b16766136ce5ada57";
@@ -57,21 +62,9 @@ function now(date) {
   function changeCity(event) {
     event.preventDefault();
     let searchedCity = document.querySelector("input");
-    let newCity = document.querySelector("h1");
+    let newCity = document.querySelector("#city");
     newCity.innerHTML = `${searchedCity.value}`;
     searchCity(searchedCity.value);
-  }
-  
-  function toCelsius(event) {
-    event.preventDefault();
-    let tempElement = document.querySelector(".current-temp");
-    tempElement.innerHTML = 74;
-  }
-  
-  function toFahrenheit(event) {
-    event.preventDefault();
-    let tempElement = document.querySelector(".current-temp");
-    tempElement.innerHTML = 74;
   }
   
   let displayDate = document.querySelector(".dateandtime");
@@ -80,4 +73,5 @@ function now(date) {
   
   let submitCity = document.querySelector("#submit-city");
   submitCity.addEventListener("click", changeCity);
+  
   

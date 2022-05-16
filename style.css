@@ -12,17 +12,6 @@ body {
     box-shadow: 2px 2px 20px #bcaea2;
   }
   
-  .container-brdr {
-    border-left: 30px solid;
-    border-right: 30px solid;
-    border-top: 2px solid #d2c1b3;
-    border-bottom: 2px solid #d2c1b3;
-    padding: 15px;
-    border-radius: 10px;
-    border-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Houndstooth.jpg/195px-Houndstooth.jpg) 40 round;
-  }
-  
-  }
   h1,
   .cityname {
     font-size: 24px;
