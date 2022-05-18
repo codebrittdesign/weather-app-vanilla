@@ -39,7 +39,7 @@ function now(date) {
   
     cityElement.innerHTML = response.data.name;
     tempElement.innerHTML = Math.round(response.data.main.temp);
-    dateElement.innerHTML = formatDate(response.data.dt * 1000);
+    dateElement.innerHTML = now(response.data.dt * 1000);
     conditionsElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = Math.round(
       response.data.main.humidity);
@@ -50,7 +50,7 @@ function now(date) {
   function searchCity(city) {
     let apiKey = "b7b9844b6ed8730b16766136ce5ada57";
     let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-    axios.get(apiURL).then(weatherDisplay);
+    axios.get(apiURL).then(displayWeather);
   }
   
   function handleSubmit(event) {
