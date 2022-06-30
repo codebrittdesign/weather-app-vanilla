@@ -74,4 +74,20 @@ function now(date) {
   let submitCity = document.querySelector("#submit-city");
   submitCity.addEventListener("click", changeCity);
   
+  function toC(event) {
+    event.preventDefault();
+    let tempElement = document.querySelector("#current-temp");
+    tempElement.innerHTML = 23;
+  }
   
+  function toF(event) {
+    event.preventDefault();
+    let tempElement = document.querySelector("#current-temp");
+    tempElement.innerHTML = 74;
+  }
+  
+  let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", toC);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", toF);

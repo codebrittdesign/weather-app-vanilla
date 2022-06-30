@@ -82,7 +82,7 @@ body {
   a,
   a:hover {
     text-decoration: none;
-    color: rgb(150, 90, 106);
+    color: black;
   }
   .currentemoji {
     margin-top: 35px;
