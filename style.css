@@ -4,7 +4,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
   #container {
-    background: linear-gradient(135deg, #ffe6cc 0%, #c8b8ab 100%);
+    background: linear-gradient(135deg, #ffe6cc 0%, #d4c3b5 100%);
     display: block;
     margin: 5px auto;
     max-width: 600px;
