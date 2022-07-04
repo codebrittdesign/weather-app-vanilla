@@ -28,9 +28,72 @@ function now(date) {
 
 }
 
+function formatDays(time) {
+
+  let date = new Date(time * 1000);
+  let day = date.getDay ();
+
+  let days = [ 
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday"
+];
+
+return days[day];
+}
+function showForecast(response) {
+
+  let forecast = response.data.daily;
+
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday"];
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 4) {
+      
+
+  forecastHTML = forecastHTML + `
+
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="forecast-day">${formatDays(forecastDay.dt)}</h5>
+        <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" width="75" alt="" />
+        <ul>
+          <li>
+            <span class="label">high</span> <span id="high"> ${Math.round(forecastDay.temp.max)}</span>
+          </li>
+
+          <li>
+            <span class="label">low</span> <span id="low"> ${Math.round(forecastDay.temp.min)}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+  `;
+  }});
+  
+forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+
 let displayDate = document.querySelector(".dateandtime");
 let currentTime = new Date();
 displayDate.innerHTML = now(currentTime);
+
+function getForecast(coordinates) {
+  let apiKey = "b7b9844b6ed8730b16766136ce5ada57";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+axios.get(apiUrl).then(showForecast);
+}
 
 function displayTemperature(response) {
   console.log(response.data);
@@ -50,6 +113,8 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 let apiKey = "b7b9844b6ed8730b16766136ce5ada57";
@@ -102,3 +167,6 @@ toFahrenheit.addEventListener("click", showFahrenheit);
 
 let toCelsius = document.querySelector("#celsius");
 toCelsius.addEventListener("click", showCelsius);
+
+searchCity("Atlanta");
+showForecast();
